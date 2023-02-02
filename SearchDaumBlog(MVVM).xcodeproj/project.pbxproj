@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		B3657F23298B9CE500B67F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F22298B9CE500B67F77 /* AppDelegate.swift */; };
 		B3657F25298B9CE500B67F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F24298B9CE500B67F77 /* SceneDelegate.swift */; };
-		B3657F27298B9CE500B67F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F26298B9CE500B67F77 /* ViewController.swift */; };
-		B3657F2A298B9CE500B67F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3657F28298B9CE500B67F77 /* Main.storyboard */; };
 		B3657F2C298B9CE700B67F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3657F2B298B9CE700B67F77 /* Assets.xcassets */; };
 		B3657F2F298B9CE700B67F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3657F2D298B9CE700B67F77 /* LaunchScreen.storyboard */; };
+		B3657F3E298B9D3300B67F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F37298B9D3300B67F77 /* MainViewController.swift */; };
+		B3657F3F298B9D3300B67F77 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F39298B9D3300B67F77 /* FilterView.swift */; };
+		B3657F40298B9D3300B67F77 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F3A298B9D3300B67F77 /* SearchBar.swift */; };
+		B3657F41298B9D3300B67F77 /* BlogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F3C298B9D3300B67F77 /* BlogListView.swift */; };
+		B3657F42298B9D3300B67F77 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F3D298B9D3300B67F77 /* BlogListCell.swift */; };
+		B3657F49298B9D3C00B67F77 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F44298B9D3C00B67F77 /* SearchBlogNetwork.swift */; };
+		B3657F4A298B9D3C00B67F77 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F46298B9D3C00B67F77 /* BlogListCellData.swift */; };
+		B3657F4B298B9D3C00B67F77 /* AlertActionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F47298B9D3C00B67F77 /* AlertActionConvertible.swift */; };
+		B3657F4C298B9D3C00B67F77 /* DKBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3657F48298B9D3C00B67F77 /* DKBlog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3657F1F298B9CE500B67F77 /* SearchDaumBlog(MVVM).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SearchDaumBlog(MVVM).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3657F22298B9CE500B67F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3657F24298B9CE500B67F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3657F26298B9CE500B67F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3657F29298B9CE500B67F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3657F2B298B9CE700B67F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3657F2E298B9CE700B67F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3657F30298B9CE700B67F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3657F37298B9D3300B67F77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B3657F39298B9D3300B67F77 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		B3657F3A298B9D3300B67F77 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B3657F3C298B9D3300B67F77 /* BlogListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogListView.swift; sourceTree = "<group>"; };
+		B3657F3D298B9D3300B67F77 /* BlogListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
+		B3657F44298B9D3C00B67F77 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
+		B3657F46298B9D3C00B67F77 /* BlogListCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
+		B3657F47298B9D3C00B67F77 /* AlertActionConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionConvertible.swift; sourceTree = "<group>"; };
+		B3657F48298B9D3C00B67F77 /* DKBlog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKBlog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,60 @@
 			children = (
 				B3657F22298B9CE500B67F77 /* AppDelegate.swift */,
 				B3657F24298B9CE500B67F77 /* SceneDelegate.swift */,
-				B3657F26298B9CE500B67F77 /* ViewController.swift */,
-				B3657F28298B9CE500B67F77 /* Main.storyboard */,
+				B3657F36298B9D3300B67F77 /* Presentation */,
+				B3657F45298B9D3C00B67F77 /* Entities */,
+				B3657F43298B9D3C00B67F77 /* Network */,
 				B3657F2B298B9CE700B67F77 /* Assets.xcassets */,
 				B3657F2D298B9CE700B67F77 /* LaunchScreen.storyboard */,
 				B3657F30298B9CE700B67F77 /* Info.plist */,
 			);
 			path = "SearchDaumBlog(MVVM)";
+			sourceTree = "<group>";
+		};
+		B3657F36298B9D3300B67F77 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B3657F37298B9D3300B67F77 /* MainViewController.swift */,
+				B3657F38298B9D3300B67F77 /* SubComponents */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B3657F38298B9D3300B67F77 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B3657F39298B9D3300B67F77 /* FilterView.swift */,
+				B3657F3A298B9D3300B67F77 /* SearchBar.swift */,
+				B3657F3B298B9D3300B67F77 /* ListView */,
+			);
+			path = SubComponents;
+			sourceTree = "<group>";
+		};
+		B3657F3B298B9D3300B67F77 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				B3657F3C298B9D3300B67F77 /* BlogListView.swift */,
+				B3657F3D298B9D3300B67F77 /* BlogListCell.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		B3657F43298B9D3C00B67F77 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B3657F44298B9D3C00B67F77 /* SearchBlogNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B3657F45298B9D3C00B67F77 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B3657F46298B9D3C00B67F77 /* BlogListCellData.swift */,
+				B3657F47298B9D3C00B67F77 /* AlertActionConvertible.swift */,
+				B3657F48298B9D3C00B67F77 /* DKBlog.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +188,6 @@
 			files = (
 				B3657F2F298B9CE700B67F77 /* LaunchScreen.storyboard in Resources */,
 				B3657F2C298B9CE700B67F77 /* Assets.xcassets in Resources */,
-				B3657F2A298B9CE500B67F77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3657F27298B9CE500B67F77 /* ViewController.swift in Sources */,
+				B3657F3F298B9D3300B67F77 /* FilterView.swift in Sources */,
+				B3657F4C298B9D3C00B67F77 /* DKBlog.swift in Sources */,
+				B3657F42298B9D3300B67F77 /* BlogListCell.swift in Sources */,
+				B3657F4B298B9D3C00B67F77 /* AlertActionConvertible.swift in Sources */,
+				B3657F3E298B9D3300B67F77 /* MainViewController.swift in Sources */,
+				B3657F40298B9D3300B67F77 /* SearchBar.swift in Sources */,
 				B3657F23298B9CE500B67F77 /* AppDelegate.swift in Sources */,
+				B3657F41298B9D3300B67F77 /* BlogListView.swift in Sources */,
+				B3657F49298B9D3C00B67F77 /* SearchBlogNetwork.swift in Sources */,
+				B3657F4A298B9D3C00B67F77 /* BlogListCellData.swift in Sources */,
 				B3657F25298B9CE500B67F77 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B3657F28298B9CE500B67F77 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3657F29298B9CE500B67F77 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B3657F2D298B9CE700B67F77 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +352,7 @@
 				INFOPLIST_FILE = "SearchDaumBlog(MVVM)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +380,7 @@
 				INFOPLIST_FILE = "SearchDaumBlog(MVVM)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
