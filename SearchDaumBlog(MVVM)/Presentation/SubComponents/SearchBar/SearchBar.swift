@@ -10,11 +10,14 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
+// View에서 이벤트에 관련한 것들은 모두 ViewModel로 전달
 class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
     
     let searchButton = UIButton()
     
+    /*
+    // 뷰에서 가지고 있지 않아도 되는 코드 -> ViewModel
     // searchbar 버튼 탭 이벤트
     // subject를 쓸 수 있지만 error를 받지 않고 UI의 이벤트에 특화된 relay 사용
     // 버튼의 경우 별다른 값을 전달하지 않고 주로 탭 이벤트만 전달되기 때문에 void라고 표현
@@ -22,11 +25,12 @@ class SearchBar: UISearchBar {
     
     // searchbar 외부로 내보낼 이벤트
     var shouldLoadResult = Observable<String>.of("")
+     */
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        bind()
+//        bind()
         attribute()
         layout()
     }
@@ -36,6 +40,10 @@ class SearchBar: UISearchBar {
     }
     
     private func bind() {
+        self.rx.text
+            .bind(to: viewModel.queryText)
+            .disposed(by: disposeBag)
+        
         Observable
             .merge(
                 // 버튼 탭 이벤트가 발생하는 경우
@@ -51,11 +59,14 @@ class SearchBar: UISearchBar {
             .emit(to: self.rx.endEditing) // 구독(subscribe)
             .disposed(by: disposeBag)
         
+        /*
+        // 뷰에서 가지고 있지 않아도 되는 코드 -> ViewModel
         // 버튼 탭 이벤트가 발생했을 때 최신 값(빈값, 중복값 없이)을 전달
         self.shouldLoadResult = searchButtonTapped
             .withLatestFrom(self.rx.text) { $1 ?? "" }
             .filter { !$0.isEmpty }
             .distinctUntilChanged()
+         */
     }
     
     private func attribute() {

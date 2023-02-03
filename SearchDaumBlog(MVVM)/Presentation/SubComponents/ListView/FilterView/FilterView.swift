@@ -18,8 +18,8 @@ class FilterView: UITableViewHeaderFooterView {
     // 경계선
     let bottomBorder = UIView()
     
-    //FilterView 외부에서 관찰
-    let sortButtonTapped = PublishRelay<Void>()
+//    //FilterView 외부에서 관찰
+//    let sortButtonTapped = PublishRelay<Void>()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -33,9 +33,9 @@ class FilterView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
+    func bind(_ viewModel: FilterViewModel) {
         sortButton.rx.tap
-            .bind(to: sortButtonTapped)
+            .bind(to: viewModel.sortButtonTapped)
             .disposed(by: disposeBag)
     }
     

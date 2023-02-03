@@ -20,13 +20,13 @@ class BlogListView: UITableView {
         )
     )
     
-    // MainViewController 이벤트를 BlogListCellData형태로 BlogListView로 받아옴
-    let cellData = PublishSubject<[BlogListCellData]>()
+//    // MainViewController 이벤트를 BlogListCellData형태로 BlogListView로 받아옴
+//    let cellData = PublishSubject<[BlogListCellData]>()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
-        bind()
+//        bind()
         attribute()
     }
     
@@ -34,6 +34,7 @@ class BlogListView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /*
     private func bind() {
         // UITableView의 delegate(cellForRowAt)를 Rx로 표현함
         cellData
@@ -46,6 +47,20 @@ class BlogListView: UITableView {
             }
             .disposed(by: disposeBag)
     }
+     */
+    func bind(_ viewModel: BlogListViewModel) {
+        headerView.bind(viewModel.filterViewModel)
+        
+        viewModel.cellData
+            .drive(self.rx.items) { tv, row, data in
+                let index = IndexPath(row: row, section: 0)
+                let cell = tv.dequeueReusableCell(withIdentifier: "BlogListCell", for: index) as! BlogListCell
+                cell.setData(data)
+                return cell
+            }
+            .disposed(by: disposeBag)
+    }
+    
     
     private func attribute() {
 //        self.backgroundColor = .white

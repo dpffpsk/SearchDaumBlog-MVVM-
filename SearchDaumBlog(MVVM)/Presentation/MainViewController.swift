@@ -17,13 +17,13 @@ class MainViewController: UIViewController {
     let searchBar = SearchBar()
     let listView = BlogListView()
     
-    // AlertAction 이벤트를 담아 전달해주는 객체
-    let alertActionTapped = PublishRelay<AlertAction>()
+//    // AlertAction 이벤트를 담아 전달해주는 객체
+//    let alertActionTapped = PublishRelay<AlertAction>()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        bind()
+//        bind()
         attribute()
         layout()
     }
@@ -33,7 +33,18 @@ class MainViewController: UIViewController {
     }
     
     private func bind() {
+        listView.bind(viewModel.blogListViewModel)
+        searchBar.bind(viewModel.searchBarViewModel)
         
+        viewModel.shouldPresentAlert
+            .flatMapLatest { alert -> Signal<MainViewController.AlertAction> in
+                let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
+                return self.presentAlertController(alertController, actions: alert.actions)
+            }
+            .emit(to: viewModel.alertActionTapped)
+            .disposed(by: disposeBag)
+        
+        /*
         // searchbar의 shouldLoadResult 옵저버 이벤트가 발생하면 여기로 값이 전달 됨
         let blogResult = searchBar.shouldLoadResult
             .flatMapLatest {
@@ -144,6 +155,7 @@ class MainViewController: UIViewController {
             }
             .emit(to: alertActionTapped) // 구독(subscribe)
             .disposed(by: disposeBag)
+        */
     }
     
     private func attribute() {
