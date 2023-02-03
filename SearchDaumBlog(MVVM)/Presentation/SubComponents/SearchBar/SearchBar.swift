@@ -39,7 +39,7 @@ class SearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
+    func bind(_ viewModel: SearchBarViewModel) {
         self.rx.text
             .bind(to: viewModel.queryText)
             .disposed(by: disposeBag)
@@ -50,11 +50,11 @@ class SearchBar: UISearchBar {
                 self.rx.searchButtonClicked.asObservable(), // 키보드 엔터
                 searchButton.rx.tap.asObservable() // 버튼 탭
             )
-            .bind(to: searchButtonTapped) // 둘 중 하나라도 이벤트가 발생할 때 마다 binding 된 relay로 전달 됨
+            .bind(to: viewModel.searchButtonTapped) // 둘 중 하나라도 이벤트가 발생할 때 마다 binding 된 relay로 전달 됨
             .disposed(by: disposeBag)
         
         // 버튼 탭 이벤트가 발생했을 때
-        searchButtonTapped
+        viewModel.searchButtonTapped
             .asSignal() // asSignal : Observalbe -> Signal로 변환
             .emit(to: self.rx.endEditing) // 구독(subscribe)
             .disposed(by: disposeBag)

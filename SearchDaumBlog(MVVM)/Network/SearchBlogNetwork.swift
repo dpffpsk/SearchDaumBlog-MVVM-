@@ -9,9 +9,18 @@ import UIKit
 import RxSwift
 
 enum SearchNetworkError: Error {
-    case invaliddURL
+    case invalidURL
     case invalidJSON
     case networkError
+    
+    var message: String {
+        switch self {
+        case .invalidURL, .invalidJSON:
+            return "데이터를 불러올 수 없습니다."
+        case .networkError:
+            return "네트워크 상태를 확인해주세요."
+        }
+    }
 }
 
 struct SearchBlogAPI {
@@ -45,7 +54,7 @@ class SearchBlogNetwork {
     // Result<success, error> : swift 기본적인 타입,
     func searchBlog(query: String) -> Single<Result<DKBlog, SearchNetworkError>> {
         guard let url = api.searchBlog(query: query).url else {
-            return .just(.failure(.invaliddURL))
+            return .just(.failure(.invalidURL))
         }
         
         let request = NSMutableURLRequest(url: url)

@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
+    func bind(_ viewModel: MainViewModel) {
         listView.bind(viewModel.blogListViewModel)
         searchBar.bind(viewModel.searchBarViewModel)
         
